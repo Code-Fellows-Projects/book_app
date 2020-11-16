@@ -47,3 +47,14 @@ Start time: 2:30
 Finish time: 3:06
 
 Actual time needed to complete: 36mins
+
+
+Number and name of feature: Render Results
+
+Estimate of time needed to complete: 45mins
+
+Start time: 3:06
+
+Finish time: 3:30
+
+Actual time needed to complete: 24mins
