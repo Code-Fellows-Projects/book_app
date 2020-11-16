@@ -11,9 +11,21 @@ app.set('view engine', 'ejs');
 
 app.get('/', renderHomePage);
 
+app.get('/searches/new', showForm);
+// app.post('/searches', createSearch);
+
 function renderHomePage(req, res) {
   res.render('pages/index');
 }
+
+function showForm(req, res) {
+  res.render('pages/searches/new.ejs');
+}
+
+// function createSearch (req,res){
+//   let url = 'https://www.googleapis.com/books/v1/volumes?q=';
+//   if ()
+// }
 
 app.listen(PORT, () => {
   console.log(`server up on ${PORT}`);
