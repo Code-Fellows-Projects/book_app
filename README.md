@@ -58,3 +58,14 @@ Start time: 3:06
 Finish time: 3:30
 
 Actual time needed to complete: 24mins
+
+Number and name of feature: Error
+
+Estimate of time needed to complete: 15mins
+
+Start time: 3:30
+
+Finish time: 3:47
+
+Actual time needed to complete: 17mins
+

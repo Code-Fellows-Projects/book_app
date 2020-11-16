@@ -13,6 +13,7 @@ app.get('/', renderHomePage);
 
 app.get('/searches/new', showForm);
 app.post('/searches', createSearch);
+app.get('/pages/error', renderError);
 
 
 function renderHomePage(req, res) {
@@ -21,6 +22,10 @@ function renderHomePage(req, res) {
 
 function showForm(req, res) {
   res.render('pages/searches/new.ejs');
+}
+
+function renderError(req, res) {
+  res.render('pages/error');
 }
 
 function createSearch(req, res) {
@@ -38,7 +43,9 @@ function createSearch(req, res) {
     .then(results => {
       res.render('pages/searches/show.ejs', { searchResults: JSON.stringify(results) });
     })
-    .catch(err => console.error(err));
+    .catch(err => {
+      res.render('pages/error', err);
+    });
 }
 
 function Book(info) {
