@@ -2,23 +2,38 @@
 <html>
 
 <head>
+  <link rel="stylesheet" type="text/css" href="../styles/reset.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../styles/layout.css">
   <title>Form for Book Searching...</title>
 </head>
+<header>
+  <h1>Best Books!</h1>
+  <img src="https://icon-library.com/images/white-menu-icon/white-menu-icon-4.jpg" />
+</header>
 
 <body>
-  <h1>Search for Books:</h1>
-  <form action="/searches" method="post">
-    <input type="text" name="search" placeholder="Enter Author or Title" required>
-    <fieldset>
-      <label for="title"> Title:</label>
-      <input type="radio" name="search" value="title" required>
-    </fieldset>
-    <fieldset>
-      <label for="author"> Author:</label>
-      <input type="radio" name="search" value="author" required>
-    </fieldset>
-    <button type="submit">Search the Google Book API</button>
-  </form>
+  <main>
+    <h2>Search By Title or Author</h2>
+    <form action="/searches" method="post">
+      <input id="textfield" type="text" name="search" placeholder="Enter a title or author" required>
+      <fieldset id="title">
+        <label for="title"> Title </label>
+        <input id="title-radio" type="radio" name="search" value="title" required>
+      </fieldset>
+      <fieldset id="author">
+        <label for="author"> Author</label>
+        <input id="author-radio" type="radio" name="search" value="author" required>
+      </fieldset>
+      <button type="submit">Search the Google Books API</button>
+    </form>
+    <footer>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </footer>
+  </main>
 </body>
 
 </html>

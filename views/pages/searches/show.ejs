@@ -2,13 +2,37 @@
 <html>
 
 <head>
+  <link rel="stylesheet" type="text/css" href="../styles/reset.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../styles/search.css">
   <title>Results</title>
 </head>
 
 <body>
+  <header>
+    <h1>Best Books!</h1>
+    <img src="https://icon-library.com/images/white-menu-icon/white-menu-icon-4.jpg" />
+  </header>
   <main>
-    <%= searchResults %>
+    <h2>Search Results</h2>
+    <% let parsedData = JSON.parse(searchResults); %>
+    <% parsedData.forEach(book =>{ %>
+
+    <ul>
+      <li><img class="book-image" src="<%= book.image %>" /></li>
+      <li id="book-title"><%= book.title %></li>
+      <li id="author-name"><%= book.author %> </li>
+      <li><%= book.description %></li>
+    </ul>
+    <% }); %>
+
   </main>
+  <footer>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </footer>
 </body>
 
 </html>
