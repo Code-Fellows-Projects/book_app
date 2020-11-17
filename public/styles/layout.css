@@ -1,4 +1,2 @@
-*{
-
-background-color: pink;
-}
+@import 'base.css';
+@import 'modules.css';

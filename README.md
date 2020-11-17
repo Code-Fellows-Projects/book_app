@@ -69,3 +69,13 @@ Finish time: 3:47
 
 Actual time needed to complete: 17mins
 
+Number and name of feature: Styling
+
+Estimate of time needed to complete: 2 hours
+
+Start time: 4:00
+
+Finish time: 7:12
+
+Actual time needed to complete: 3 hours 12 minutes
+

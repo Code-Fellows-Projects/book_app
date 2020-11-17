@@ -36,6 +36,7 @@ function createSearch(req, res) {
   console.log(url);
   superagent.get(url)
     .then(data => {
+      console.log(data);
       return data.body.items.map(book => {
         return new Book(book.volumeInfo);
       });
@@ -49,7 +50,10 @@ function createSearch(req, res) {
 }
 
 function Book(info) {
+  this.image = info.imageLinks.thumbnail;
   this.title = info.title || 'No title available.';
+  this.author = info.authors || 'No Author Listed';
+  this.description = info.description || 'No Description Provided';
 }
 
 app.listen(PORT, () => {
