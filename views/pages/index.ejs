@@ -9,7 +9,35 @@
 
 <body>
   <main>
-    <h1>The World's Coolest Homepage</h1>
+    <header>
+      <h1>Saved Books</h1>
+
+    </header>
+    <ul>
+      <% results.forEach(book => { %>
+      <li class="book-item" data-id="<%= book.id %>">
+        <img class="book-image" src="<%= book.image_url %>" />
+        <!-- <%- console.log('this is frontend image', book.image_url) %> -->
+        <h4><%= book.title %></h4>
+        <p><%= book.author %></p>
+        <!-- <form action="/books" method="post">
+          <input type="hidden" name="author" value="<%=book.author %>">
+          <input type="hidden" name="title" value="<%=book.title %>">
+          <input type="hidden" name="isbn" value="<%=book.isbn %>">
+          <input type="hidden" name="description" value="<%=book.description %>">
+          <input type="hidden" name="image_url" value="<%=book.image_url %>">
+          <input type="submit" value="View Details">
+
+        </form> -->
+        <p><a href="/books/<%= book.id %>">View Details</a></p>
+
+
+      </li>
+      <% }) %>
+
+    </ul>
+
+    <p><%= results.length %></p>
   </main>
 </body>
 
