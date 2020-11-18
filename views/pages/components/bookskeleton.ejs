@@ -1,0 +1,6 @@
+<% let parsedData = JSON.parse(searchResults); %>
+<% parsedData.forEach(book =>{ %>
+
+<li><img class="book-image" src="<%= book.image %>" /></li>
+<li id="book-title"><%= book.title %></li>
+<li id="author-name"><%= book.author %> </li>

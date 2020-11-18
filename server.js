@@ -1,23 +1,58 @@
 'use strict';
 
+require('dotenv').config();
 const express = require('express');
 const app = express();
 const superagent = require('superagent');
 const PORT = process.env.PORT || 3000;
+const pg = require('pg');
+const client = new pg.Client(process.env.DATABASE_URL);
+const cors = require('cors');
+app.use(cors());
+
+client.connect();
+client.on('error', err => console.error(err));
 
 app.use(express.static('./public'));
 app.use(express.urlencoded({ extended: true }));
 app.set('view engine', 'ejs');
 
 app.get('/', renderHomePage);
-
+app.post('/addBook', addBook);
 app.get('/searches/new', showForm);
 app.post('/searches', createSearch);
 app.get('/pages/error', renderError);
+app.get('/books/:book_id', getOneBook);
 
+function getOneBook(req, res) {
+  let SQL = 'SELECT * FROM books WHERE id=$1;';
+  let values = [req.params.book_id];
+  console.log('result values', values)
+
+  return client.query(SQL, values)
+    .then(result => res.render('pages/books/show', { result: result.rows[0] }))
+    .catch(err => console.error(err));
+
+}
 
 function renderHomePage(req, res) {
-  res.render('pages/index');
+  let SQL = 'SELECT * FROM  books;';
+
+
+  return client.query(SQL)
+
+    .then(results => res.render('pages/index', { results: results.rows }))
+
+    .catch(err => console.error(err));
+}
+function addBook(req, res) {
+  let { title, author, isbn, image_url, description } = req.body;
+  let SQL = 'INSERT INTO books(title, author, isbn, image_url, description) VALUES ($1, $2, $3, $4, $5);';
+  let values = [title, author, isbn, image_url, description];
+
+  return client.query(SQL, values)
+    .then(res.redirect('/'))
+    .catch(err => console.error(err));
 }
 
 function showForm(req, res) {
@@ -50,9 +85,10 @@ function createSearch(req, res) {
 }
 
 function Book(info) {
-  this.image = info.imageLinks.thumbnail;
   this.title = info.title || 'No title available.';
   this.author = info.authors || 'No Author Listed';
+  this.isbn = info.industryIdentifiers[0].identifier || 'No ISBN Listed';
+  this.image = info.imageLinks.thumbnail;
   this.description = info.description || 'No Description Provided';
 }
 
