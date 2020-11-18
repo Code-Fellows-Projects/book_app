@@ -95,3 +95,35 @@ Finish time: 5:15 p.m.
 
 Actual time needed to complete: 4 hours
 ```
+```
+Number and name of feature: Book Description
+
+Estimate of time needed to complete: 1 hour
+
+Start time: 5:15 p.m.
+
+Finish time: 8:45 p.m.
+
+Actual time needed to complete: 3.5 hours
+```
+```
+Number and name of feature: Add Partials
+
+Estimate of time needed to complete: 1 hour
+
+Start time: 9:20 p.m.
+
+Finish time: 10:13 p.m.
+
+Actual time needed to complete: 1 hours
+```
+```
+Number and name of feature: Add Styling
+
+Estimate of time needed to complete: 45 mins
+
+Start time: 10:14 p.m.
+
+Finish time: 10:13 p.m.
+
+Actual time needed to complete: 1 hours

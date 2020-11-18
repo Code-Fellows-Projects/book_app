@@ -2,22 +2,25 @@
 <html>
 
 <head>
-  <title></title>
+  <%- include('../components/head') %>
 
 </head>
 
 <body>
+
   <header>
+    <h1>Best Books!</h1>
+    <img id="burger" src="https://icon-library.com/images/white-menu-icon/white-menu-icon-4.jpg" />
     <nav>
-      <ul>
-        <li><a href="/">Home</a></li>
-      </ul>
+      <a href="/">Home</a>
     </nav>
   </header>
   <main>
-    <%- include('detail', {result: result})%>
+    <div id="book-detail">
+      <%- include('detail', {result: result})%>
+    </div>
   </main>
-
+  <%- include('../components/footer')%>
 
 </body>
 
