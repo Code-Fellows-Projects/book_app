@@ -90,6 +90,12 @@ function Book(info) {
   this.isbn = info.industryIdentifiers[0].identifier || 'No ISBN Listed';
   this.image = info.imageLinks.thumbnail;
   this.description = info.description || 'No Description Provided';
+
+  if (this.image.substring(0, 6) !== 'https') {
+    let imageLinkS = this.image.substring(6);
+    let newImageUrl = 'https:/' + imageLinkS;
+    this.image = newImageUrl;
+  }
 }
 
 app.listen(PORT, () => {
