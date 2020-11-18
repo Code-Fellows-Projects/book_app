@@ -95,6 +95,7 @@ function Book(info) {
     let imageLinkS = this.image.substring(6);
     let newImageUrl = 'https:/' + imageLinkS;
     this.image = newImageUrl;
+    console.log('what is the url', newImageUrl);
   }
 }
 
