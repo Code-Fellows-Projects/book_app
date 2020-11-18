@@ -2,10 +2,7 @@
 <html>
 
 <head>
-  <link rel="stylesheet" type="text/css" href="../styles/reset.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="../styles/layout.css">
-  <title>Form for Book Searching...</title>
+  <%- include('../components/head') %>
 </head>
 <header>
   <h1>Best Books!</h1>
@@ -27,12 +24,7 @@
       </fieldset>
       <button type="submit">Search the Google Books API</button>
     </form>
-    <footer>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-    </footer>
+    <%- include('../components/footer')%>
   </main>
 </body>
 
