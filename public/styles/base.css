@@ -38,14 +38,13 @@ header img{
   top: 25px;
   left: 450px;
 }
-form{
+#update-form{
   text-align: center;
   height: 500px;
   display:flex;
   justify-content: center;
 align-items: center;
 flex-wrap: wrap;
-margin-bottom: 400px;
 }
 
 fieldset{
