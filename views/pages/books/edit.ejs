@@ -4,7 +4,7 @@
     <input type="text" name="author" value="<%= result.author %>">
     <input type="text" name="isbn" value="<%= result.isbn %>">
     <input type="text" name="image_url" value="<%= result.image_url %>">
-    <textarea name="description"><%= result.description %></textarea>
+    <textarea id="text" name="description"><%= result.description %></textarea>
     <button id="update-button" class="update-button" type="submit">Update Book</button>
   </form>
   <form id="delete-form" action="/delete/<%= result.id %>?_method=DELETE" method="post">
