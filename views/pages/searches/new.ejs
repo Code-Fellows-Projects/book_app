@@ -12,20 +12,21 @@
 <body>
   <main>
     <h2>Search By Title or Author</h2>
-    <form action="/searches" method="post">
+    <form id="search-form" action="/searches" method="post">
       <input id="textfield" type="text" name="search" placeholder="Enter a title or author" required>
-      <fieldset id="title">
+      <fieldset class="search-option" id="title">
         <label for="title"> Title </label>
         <input id="title-radio" type="radio" name="search" value="title" required>
       </fieldset>
-      <fieldset id="author">
+      <fieldset class="search-option" id="author">
         <label for="author"> Author</label>
         <input id="author-radio" type="radio" name="search" value="author" required>
       </fieldset>
-      <button type="submit">Search the Google Books API</button>
+      <button id="search-button" type="submit">Search the Google Books API</button>
     </form>
-    <%- include('../components/footer')%>
+
   </main>
+  <%- include('../components/footer')%>
 </body>
 
 </html>

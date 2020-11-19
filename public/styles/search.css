@@ -2,25 +2,18 @@ body{
   width: 480px;
   background-color: rgb(34, 33, 33);
   font-family: 'Roboto Condensed', sans-serif;
+ margin-left: 50px;
 }
 main{
   width: 480px;
-  /* overflow: scroll; */
   background-color: rgb(163, 163, 163);
   position: relative;
-  margin-left: 50px;
-}
-/* header{
-  height: 50px;
-  color: white;
-  letter-spacing: 1px;
-  position: relative;
-  padding: 15px;
   display:flex;
+  justify-content: center;
 align-items: center;
-font-size: 1.5em;
+flex-wrap: wrap;
+} 
 
-} */
 header h1{
   text-shadow: rgb(102, 102, 102) 1px 1px;
 }
@@ -42,12 +35,7 @@ header img{
   top: 25px;
   left: 450px;
 }
-main{
-  display:flex;
-  justify-content: center;
-align-items: center;
-flex-wrap: wrap;
-}
+
 main h2{
   height: 50px;
   width: 480vw;
@@ -115,20 +103,4 @@ p a {
   padding: 20px 0px;
   margin-left: 60px;
   margin-top: 10px;
-}
-footer{
-  background-color: black;
-  display:flex;
-  justify-content: space-between;
-align-items: center;
-position:fixed;
-z-index: 99999999;
-}
-footer div{
-  height: 20px;
-  width: 20px;
-  background-color: rgb(75, 75, 75);
-  border: transparent;
-  border-radius: 50%;
-  margin: 10px;
 }

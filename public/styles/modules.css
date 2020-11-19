@@ -11,11 +11,26 @@
   padding: 9px;
 }
 #author{
- width: 300px;
+ width: 400px;
  text-align: center;
 }
 label{
   padding-right: 15px;
+}
+#show-main{
+  height: 1200px;
+}
+#index-main{
+  height: 700px;
+}
+#sub-header{
+  width: 480px;
+  height: 80px;
+  color: white;
+  background-color: rgb(75, 75, 75);
+  margin-top: -35px;
+  text-shadow: rgb(102, 102, 102) 1px 1px;
+  box-shadow: none;
 }
 button{
   width: 200px;
@@ -32,11 +47,14 @@ footer{
   display:flex;
   justify-content: space-between;
 align-items: center;
+width: 480px;
+height: 80px;
+z-index: 9999999999999;
 
 }
 footer div{
-  height: 20px;
-  width: 20px;
+  height: 30px;
+  width: 30px;
   background-color: rgb(75, 75, 75);
   border: transparent;
   border-radius: 50%;
@@ -62,14 +80,17 @@ form textarea{
 #update-form{
   border: transparent;
 }
-/* .update-book{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
+#update-form input{
+  margin: 10px 10px 10px 10px;
+}
+
 #delete-form{
   width: 100px;
   height: 50px;
+}
+#search-button{
+  margin-left: 140px;
+
 }
 .update-button{
   width: 125px;
@@ -77,9 +98,24 @@ form textarea{
   background-color: rgb(44, 44, 44);
 }
 #update-button{
- top: 500px;
+ top: 400px;
  left: 0px;
 }
 #delete-button{
-  margin-right: 25px;
+  top: 400px;
+  right: 0;
+}
+#text{
+  margin: 10px;
+}
+#author-radio{
+  position: absolute;
+  left: 100px;
+  bottom: 230px;
+}
+
+#title-radio{
+  position: absolute;
+  left: 100px;
+  bottom: 325px;
 }
