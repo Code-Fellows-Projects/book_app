@@ -20,17 +20,7 @@ section::-webkit-scrollbar{
   width: 0px;
   background: transparent;
 }
-header{
-  height: 50px;
-  color: white;
-  letter-spacing: 1px;
-  position: relative;
-  padding: 15px;
-  display:flex;
-align-items: center;
-font-size: 1.5em;
-z-index: 999999999;
-}
+
 header img{
   height: 20px;
   width: 20px;
