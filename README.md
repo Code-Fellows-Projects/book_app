@@ -1,9 +1,9 @@
 # book_app
 
-# Project Name
+# Project Name book_app
 
-**Author**: Your Name Goes Here
-**Version**: 1.0.0 (increment the patch/fix version number if you make more commits past your first submission)
+**Author**: Stacy Burris, Ameilia Valdes
+**Version**: 1.1.0 (increment the patch/fix version number if you make more commits past your first submission)
 
 ## Overview
 
@@ -124,6 +124,31 @@ Estimate of time needed to complete: 45 mins
 
 Start time: 10:14 p.m.
 
-Finish time: 10:13 p.m.
+Finish time: 12:00 p.m.
 
-Actual time needed to complete: 1 hours
+Actual time needed to complete: 1 hour 45 mins
+```
+```
+Number and name of feature: Update Books
+
+Estimate of time needed to complete: 2 hours
+
+Start time: 1:15 p.m.
+
+Finish time: 3:00 p.m.
+
+Actual time needed to complete: 1 hour 45 mins
+```
+```
+Number and name of feature: Delete Books
+
+Estimate of time needed to complete: 2 hours
+
+Start time: 3:00 p.m.
+
+Finish time: 4:30 p.m.
+
+Actual time needed to complete: 1 hour 30 mins
+```
+### Collaborators:
+Chance, Bade, Brai, Simon, JP, Skylar

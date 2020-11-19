@@ -8,6 +8,7 @@
 <body>
   <main>
     <header>
+      <p id="book-counter"><%= results.length %></p>
       <h1>Saved Books</h1>
 
     </header>
@@ -22,8 +23,6 @@
       <% }) %>
 
     </ul>
-
-    <p>Number of Saved Books:<%= results.length %></p>
   </main>
   <%- include('./components/footer')%>
 </body>
