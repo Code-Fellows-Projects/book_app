@@ -8,10 +8,14 @@
 <body>
   <main>
     <header>
-      <p id="book-counter"><%= results.length %></p>
-      <h1>Saved Books</h1>
-
+      <h1>Best Books!</h1>
+      <img src="https://icon-library.com/images/white-menu-icon/white-menu-icon-4.jpg" />
     </header>
+
+    <p id="book-counter"><%= results.length %></p>
+    <h1>Saved Books</h1>
+
+
     <ul>
       <% results.forEach(book => { %>
       <li class="book-item" data-id="<%= book.id %>">

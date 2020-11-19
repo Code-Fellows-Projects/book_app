@@ -8,8 +8,9 @@ main{
   /* overflow: scroll; */
   background-color: rgb(163, 163, 163);
   position: relative;
+  margin-left: 50px;
 }
-header{
+/* header{
   height: 50px;
   color: white;
   letter-spacing: 1px;
@@ -19,6 +20,20 @@ header{
 align-items: center;
 font-size: 1.5em;
 
+} */
+header h1{
+  text-shadow: rgb(102, 102, 102) 1px 1px;
+}
+#book-counter{
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  font-size: 15px;
+  background-color: white;
+  color: rgb(102, 102, 102);
+  text-align: center;
+  padding: 5px 5px 0px 5px;
+  margin: 5px;
 }
 header img{
   height: 20px;
@@ -78,6 +93,28 @@ ul::-webkit-scrollbar {
 }
 li{
   padding: 0px 40px 0px 40px;
+}
+li h4{
+  color:white;
+  text-shadow: rgb(102, 102, 102) 1px 1px;
+  font-size: 1.2em;
+  margin-bottom: 5px;
+}
+li p{
+  color:rgb(102, 102, 102) 1px 1px; 
+  font-style: italic;
+}
+p a {
+  width: 150px;
+  height: 25px;
+  background-color: black;
+  color: white;
+  border-radius: 4px;
+  text-decoration: none;
+  display: block;
+  padding: 20px 0px;
+  margin-left: 60px;
+  margin-top: 10px;
 }
 footer{
   background-color: black;
